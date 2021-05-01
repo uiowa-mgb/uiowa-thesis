@@ -5,14 +5,15 @@
 
 \LoadClass[openany]{memoir}
 
-
-\newcommand{\thecommittee}{The Committee}
-\newcommand{\committee}[1]{\renewcommand{\thecommittee}{#1}}
+% Code to handle the committee
+% The Committee is an etoolbox list
+% ThesisSupervisor adds to the list while appending "Thesis Supervisor"
+% CommitteeMember adds to the list
+\newcommand{\thecommittee}{}
+\newcommand{\ThesisSupervisor}[1]{\listadd{\thecommittee}{#1, Thesis Supervisor}}
+\newcommand{\CommitteeMember}[1]{\listadd{\thecommittee}{#1}}
 
 \titlingpageend{\clearforchapter}{\clearforchapter}
-
-\newcommand{\committeelist}{
-}
 
 \newcommand{\titlepage}{%
 \begin{titlingpage}
@@ -33,8 +34,8 @@
   \flushleft
   Thesis Committee:
   \begin{itemize}
-   \renewcommand*{\do}[1]{\item ##1} 
-   \expandafter\docsvlist{\thecommittee}
+    \renewcommand*{\do}[1]{\item ##1}
+    \dolistloop{\thecommittee}
   \end{itemize}
 \end{titlingpage}%
 }
