@@ -5,6 +5,14 @@
 
 \LoadClass[openany]{memoir}
 
+% Fix the numbering of the front matter (start from page ii)
+\let\old@frontmatter\frontmatter
+\renewcommand*{\frontmatter}{%
+\old@frontmatter
+\addtocounter{page}{1}
+}
+
+
 % Code to handle the committee
 % The Committee is an etoolbox list
 % ThesisSupervisor adds to the list while appending "Thesis Supervisor"
