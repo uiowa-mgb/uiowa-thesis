@@ -1,9 +1,14 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{uithesis}[2021/04/30]
 
-\RequirePackage{etoolbox}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}}
+\ProcessOptions
+\LoadClass{memoir}
+\pagestyle{plain}
+\OnehalfSpacing
 
-\LoadClass[openany]{memoir}
+\RequirePackage{etoolbox}
+\RequirePackage{biblatex}
 
 % Fix the numbering of the front matter (start from page ii)
 \let\old@frontmatter\frontmatter
@@ -11,6 +16,20 @@
 \old@frontmatter
 \addtocounter{page}{1}
 }
+
+% The Abstract should be on its own page
+\let\old@abstract\abstract
+\let\old@endabstract\endabstract
+\renewenvironment{abstract}
+  {\clearpage\old@abstract}
+  {\old@endabstract\clearpage}
+
+\newenvironment{publicAbstract}
+  {
+    \renewcommand{\abstractname}{Public Abstract}
+    \begin{abstract}
+  }
+  {\end{abstract}\clearpage}
 
 
 % Code to handle the committee
@@ -46,4 +65,12 @@
     \dolistloop{\thecommittee}
   \end{itemize}
 \end{titlingpage}%
+
+% List of Figures should be on a new page
+\let\old@listoffigures\listoffigures
+\renewcommand{\listoffigures}{\clearpage\old@listoffigures}
 }
+
+% For some reason the bibliography has to be single spaced
+\let\old@printbibliography\printbibliography
+\renewcommand{\printbibliography}{\SingleSpacing\old@printbibliography}
