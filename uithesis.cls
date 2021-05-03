@@ -58,24 +58,23 @@
 \begin{titlingpage}
   \centering
   { \Huge \textsc{\thetitle} } 
-  \large
   \par
-  \vspace{0.6\baselineskip}
-  {By}\\[0.6\baselineskip]{\theauthor\\[0.6\baselineskip]
-  A Thesis Submitted to the Graduate\\[0.5\baselineskip]
-  Faculty of The University of Iowa\\[0.5\baselineskip]
-  in Partial Fulfillment of the\\[0.5\baselineskip]
-  Requirements for the Degree of\\[0.5\baselineskip]Doctor of Philosophy\\[0.5\baselineskip]
-  in Applied Mathematics}\\[0.5\baselineskip]
-  \thedate
+  \vspace{\fill}
+  {by}\\[0.6\baselineskip]{\theauthor\vspace{\fill}\\[0\baselineskip]
+  A Thesis Submitted to the Graduate Faculty\\[0\baselineskip]
+  of The University of Iowa in Partial Fulfillment\\[0\baselineskip]
+  of the Requirements for the Degree of\\[0\baselineskip]
+  Doctor of Philosophy\\[0\baselineskip]
+  in Applied Mathematics \& Computational Sciences}\\[2.5\baselineskip]
+  \thedate\\[2.5\baselineskip]
   \par
 
-  \flushleft
-  Thesis Committee:
-  \begin{itemize}
-    \renewcommand*{\do}[1]{\item ##1}
-    \dolistloop{\thecommittee}
-  \end{itemize}
+  % Including committee members
+  \renewcommand*{\do}[1]{& ##1\\[0\baselineskip]}
+  \begin{tabular}{r l}
+    Thesis Committee:{} \dolistloop{\thecommittee}
+  \end{tabular}
+
 \end{titlingpage}%
 
 % List of Figures should be on a new page
