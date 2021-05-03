@@ -31,6 +31,18 @@
   }
   {\end{abstract}\clearpage}
 
+% A copyright page---centered, no page numbering
+\newcommand{\copyrightPage}
+  {
+    \thispagestyle{empty}
+    \begin{center}
+    \vspace*{\fill}
+    Copyright \copyright{} \the\year{}\\[0\baselineskip]
+    \theauthor \\[0\baselineskip]
+    All Rights Reserved
+    \vspace*{\fill}
+    \end{center}
+  }
 
 % Code to handle the committee
 % The Committee is an etoolbox list
