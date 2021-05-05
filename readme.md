@@ -25,11 +25,11 @@ linux all one needs installed is `scons`, `make`, and `biber`. To use `make
 watch` it is also required that you have `inotifytools` installed.
 
 ## TODO
-- [ ] Clean up the title page
+- [x] Clean up the title page
 - [ ] Implement a more complete example thesis
 - [ ] Check with Erin if this is good
 - [ ] Implement optional pages
-  - [ ] Copyright
+  - [x] Copyright
   - [ ] Epigraph
   - [ ] Acknowledgments
   - [ ] List of symbols
