@@ -85,3 +85,14 @@
 % For some reason the bibliography has to be single spaced
 \let\old@printbibliography\printbibliography
 \renewcommand{\printbibliography}{\SingleSpacing\old@printbibliography}
+
+\newcommand{\acknowledgments}
+  {
+    \clearpage
+    {
+      % This weirdness enforces that the first paragraph is indented
+      % as per the requirments.
+      \chapter*{Acknowledgments}
+      \par
+    }
+  }

@@ -31,7 +31,7 @@ watch` it is also required that you have `inotifytools` installed.
 - [ ] Implement optional pages
   - [x] Copyright
   - [ ] Epigraph
-  - [ ] Acknowledgments
+  - [x] Acknowledgments
   - [ ] List of symbols
   - [ ] List of abbreviations
   - [ ] Preface
