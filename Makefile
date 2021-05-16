@@ -1,4 +1,4 @@
-MAIN=thesis.tex
+MAIN=example/thesis.tex
 STYLE=uithesis.cls
 
 ALL=$(MAIN) $(STYLE)

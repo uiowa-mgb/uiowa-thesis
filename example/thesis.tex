@@ -25,18 +25,11 @@
 
 \iowaEpigraph{\lipsum[1]}{Some wise dude}
 
-\acknowledgments
-This is where all the helpful people get acknowledged and thanked. And now for filler.
+\input{acknowledgments.tex}
 
-\lipsum[1]
+\input{publicAbstract.tex}
 
-\begin{publicAbstract}
-	\lipsum[1-2]
-\end{publicAbstract}
-
-\begin{abstract}
-	\lipsum[1-2]
-\end{abstract}
+\input{abstract.tex}
 
 \tableofcontents*
 
@@ -46,6 +39,7 @@ This is where all the helpful people get acknowledged and thanked. And now for f
 
 \mainmatter
 
+<<<<<<< HEAD
 \chapter{Background Material}
 
 In this chapter I introduce all the backgronud material needed to understand the
@@ -107,6 +101,10 @@ rest of the things.
 	\caption{A very cool table with no meaning}
 \end{table}
 \lipsum[48-61]
+=======
+\input{chapters/01.tex}
+\input{chapters/02.tex}
+>>>>>>> 8a21d29 (Moved everything out to seperate files)
 
 \backmatter
 

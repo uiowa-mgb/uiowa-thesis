@@ -3,13 +3,11 @@ from pathlib import Path
 
 main = "thesis"
 
-figures = Path("figures")
-
 env = Environment(ENV=os.environ)
 env["PDFLATEX"] = "xelatex"
 
 # Build our document from notes.tex
-document = env.PDF(target= main + ".pdf", source= main + ".tex")
+document = env.PDF(target= main + ".pdf", source= "example/" + main + ".tex")
 
 env.Depends(document, "uithesis.cls")
 
