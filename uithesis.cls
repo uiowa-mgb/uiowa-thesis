@@ -76,11 +76,11 @@
   \end{tabular}
 
 \end{titlingpage}%
+}
 
 % List of Figures should be on a new page
 \let\old@listoffigures\listoffigures
 \renewcommand{\listoffigures}{\clearpage\old@listoffigures}
-}
 
 % For some reason the bibliography has to be single spaced
 \let\old@printbibliography\printbibliography
