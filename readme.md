@@ -30,7 +30,7 @@ watch` it is also required that you have `inotifytools` installed.
 - [ ] Check with Erin if this is good
 - [ ] Implement optional pages
   - [x] Copyright
-  - [ ] Epigraph
+  - [x] Epigraph
   - [x] Acknowledgments
   - [ ] List of symbols
   - [ ] List of abbreviations

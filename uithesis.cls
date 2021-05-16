@@ -96,3 +96,13 @@
       \par
     }
   }
+
+\newcommand{\iowaEpigraph}[2]{
+    \clearpage
+    \vspace*{\fill}
+      \SingleSpacing
+      \noindent{}#1
+
+    \hfill-- #2
+    \vspace*{\fill}
+  }
