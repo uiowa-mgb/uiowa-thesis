@@ -34,7 +34,7 @@ watch` it is also required that you have `inotifytools` installed.
   - [x] Acknowledgments
   - [ ] List of symbols
   - [ ] List of abbreviations
-  - [ ] Preface
+  - [x] Preface
 
 ## Requirements
 
