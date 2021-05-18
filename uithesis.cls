@@ -10,6 +10,17 @@
 \RequirePackage{etoolbox}
 \RequirePackage{biblatex}
 
+% Defining a new chapter style 
+\makechapterstyle{uichapters}{%
+  \chapterstyle{thatcher}
+  \renewcommand*{\chapnumfont}{\normalfont\scshape}
+  \renewcommand*{\chaptitlefont}{\normalfont\bfseries}
+}
+\chapterstyle{uichapters}
+
+% Don't want to include this in the chapter style, because then it makes it much harder to change later. But the default section header is too big to leave this out entirely.
+\setsecheadstyle{\normalfont\bfseries}
+
 % Fix the numbering of the front matter (start from page ii)
 \let\old@frontmatter\frontmatter
 \renewcommand*{\frontmatter}{%
