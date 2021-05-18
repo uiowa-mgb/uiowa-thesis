@@ -139,6 +139,10 @@
 \end{titlingpage}%
 }
 
+% Enforce that the t.o.c. is not in the t.o.c.
+\let\old@tableofcontents\tableofcontents
+\renewcommand{\tableofcontents}{\old@tableofcontents*}
+
 % List of Figures should be on a new page
 \let\old@listoffigures\listoffigures
 \renewcommand{\listoffigures}{\clearpage\old@listoffigures}
