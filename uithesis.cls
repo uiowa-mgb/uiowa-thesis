@@ -1,13 +1,52 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{uithesis}[2021/04/30]
 
+\RequirePackage{etoolbox}
+
+% Check if the user specified a sidedness
+\newtoggle{sidespecified}
+\DeclareOption{oneside}{
+  \toggletrue{sidespecified}
+  \PassOptionsToClass{oneside}{memoir}
+}
+\DeclareOption{twoside}{
+  \toggletrue{sidespecified}
+  \PassOptionsToClass{twoside}{memoir}
+}
+
+% Check if the used specified a side to open
+\newtoggle{openspecified}
+\DeclareOption{openany}{
+  \toggletrue{openspecified}
+  \PassOptionsToClass{openany}{memoir}
+}
+\DeclareOption{openright}{
+  \toggletrue{openspecified}
+  \PassOptionsToClass{openright}{memoir}
+}
+\DeclareOption{openleft}{
+  \toggletrue{openspecified}
+  \PassOptionsToClass{openleft}{memoir}
+}
+
+% Pass everything else to memoir
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}}
 \ProcessOptions
+
+% If no sidedness was specified, default to oneside
+\iftoggle{sidespecified}
+  {}
+  {\PassOptionsToClass{oneside}{memoir}}
+
+% If no openside was specified, default to openany
+\iftoggle{openspecified}
+  {}
+  {\PassOptionsToClass{openany}{memoir}}
+
 \LoadClass{memoir}
 \pagestyle{plain}
 \OnehalfSpacing
 
-\RequirePackage{etoolbox}
 \RequirePackage{biblatex}
 
 % Defining a new chapter style 
