@@ -30,19 +30,28 @@
 \addtocounter{page}{1}
 }
 
-% The Abstract should be on its own page
-\let\old@abstract\abstract
-\let\old@endabstract\endabstract
+% The abstract is: on it's own page, double spaced, and indents every paragraph
 \renewenvironment{abstract}
-  {\clearpage\old@abstract}
-  {\old@endabstract\clearpage}
+  {
+    \clearpage
+    {
+      \chapter*{Abstract}
+      \par
+    }
+    \DoubleSpacing
+  }
+  {\clearpage}
 
 \newenvironment{publicAbstract}
   {
-    \renewcommand{\abstractname}{Public Abstract}
-    \begin{abstract}
+    \clearpage
+    {
+      \chapter*{Public Abstract}
+      \par
+    }
+    \DoubleSpacing
   }
-  {\end{abstract}\clearpage}
+  {\clearpage}
 
 % A copyright page---centered, no page numbering
 \newcommand{\copyrightPage}
