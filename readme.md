@@ -8,7 +8,7 @@ kind of slapped together to make it work so things may not look the best and the
 optional sections are currently not implemented.
 
 ## About
-The goal of this pacakge is to implement the bare minimum needed to typeset a 
+The goal of this package is to implement the bare minimum needed to typeset a 
 thesis at the university of Iowa. It aims to be minimal in both features it
 supplies and code it takes to do so. To this end we build on the `memoir`
 document class as it is highly customizable, has a track record of being used to
