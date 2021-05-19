@@ -92,14 +92,14 @@ implemented:
   - [x] This page requires a lower-case Roman numeral page number, at the 
         bottom center of the page.
 - Acknowledgments (Optional)
-  - [ ] Text should be top-aligned, double-spaced, and with each paragraph
+  - [x] Text should be top-aligned, double-spaced, and with each paragraph
         indented.
   - [x] This page requires a lower-case Roman numeral page number, at the
         bottom center of the page.
 - Appendices (Optional)
-  - [ ] Treat Appendix headings (Appendix A, B, etc.) as major headings and
+  - [x] Treat Appendix headings (Appendix A, B, etc.) as major headings and
         include them in the Table of Contents.
-  - [ ] If more than one Appendix is included, identify them as Appendix A,
+  - [x] If more than one Appendix is included, identify them as Appendix A,
         Appendix B, and so on. Lettering is unnecessary when there is only one
         Appendix.
 

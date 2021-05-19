@@ -159,16 +159,16 @@
 \let\old@printbibliography\printbibliography
 \renewcommand{\printbibliography}{\SingleSpacing\old@printbibliography}
 
-\newcommand{\acknowledgments}
+\newenvironment{acknowledgments}
   {
     \clearpage
     {
-      % This weirdness enforces that the first paragraph is indented
-      % as per the requirments.
       \chapter*{Acknowledgments}
       \par
     }
+    \DoubleSpacing
   }
+  {\clearpage}
 
 \newcommand{\iowaEpigraph}[2]{
     \clearpage
@@ -179,4 +179,6 @@
     \hfill-- #2
     \vspace*{\fill}
   }
+
+
 
