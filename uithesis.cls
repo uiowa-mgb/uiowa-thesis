@@ -113,7 +113,10 @@
 \newcommand{\ThesisSupervisor}[1]{\listadd{\thecommittee}{#1, Thesis Supervisor}}
 \newcommand{\CommitteeMember}[1]{\listadd{\thecommittee}{#1}}
 
-\titlingpageend{\clearforchapter}{\clearforchapter}
+% Title page stuff
+
+\newcommand{\degree}[1]{\def\thedegree{#1}}
+\newcommand{\concentration}[1]{\def\theconcentration{#1}}
 
 \newcommand{\titlepage}{%
 \begin{titlingpage}
@@ -125,8 +128,8 @@
   A Thesis Submitted to the Graduate Faculty\\[0\baselineskip]
   of The University of Iowa in Partial Fulfillment\\[0\baselineskip]
   of the Requirements for the Degree of\\[0\baselineskip]
-  Doctor of Philosophy\\[0\baselineskip]
-  in Applied Mathematics \& Computational Sciences}\\[2.5\baselineskip]
+  \thedegree\\[0\baselineskip]
+  in \theconcentration}\\[2.5\baselineskip]
   \thedate\\[2.5\baselineskip]
   \par
 
@@ -138,6 +141,8 @@
 
 \end{titlingpage}%
 }
+
+\titlingpageend{\clearforchapter}{\clearforchapter}
 
 % Enforce that the t.o.c. is not in the t.o.c.
 \let\old@tableofcontents\tableofcontents
@@ -171,3 +176,4 @@
     \hfill-- #2
     \vspace*{\fill}
   }
+
