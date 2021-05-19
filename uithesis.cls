@@ -115,6 +115,9 @@
 
 % Title page stuff
 
+\newcommand{\thedegree}{\PackageError{uithesis}{Degree not specified}{Need to define the degree with \\degree}}
+\newcommand{\theconcentration}{\PackageError{uithesis}{Concentration not specified}{Need to define the concentration with \\concentration}}
+
 \newcommand{\degree}[1]{\def\thedegree{#1}}
 \newcommand{\concentration}[1]{\def\theconcentration{#1}}
 
