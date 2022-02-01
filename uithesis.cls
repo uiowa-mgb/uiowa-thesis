@@ -45,7 +45,6 @@
 
 \LoadClass{memoir}
 \pagestyle{plain}
-\OnehalfSpacing
 
 \RequirePackage{biblatex}
 
@@ -57,8 +56,8 @@
 }
 \chapterstyle{uichapters}
 
-% Don't want to include this in the chapter style, 
-% because then it makes it much harder to change later. 
+% Don't want to include this in the chapter style,
+% because then it makes it much harder to change later.
 % But the default section header is too big to leave this out entirely.
 \setsecheadstyle{\normalfont\bfseries}
 
@@ -124,15 +123,15 @@
 \newcommand{\titlepage}{%
 \begin{titlingpage}
   \centering
-  { \Huge \textsc{\thetitle} } 
+  { \LARGE \textsc{\thetitle} }
   \par
   \vspace{\fill}
   {by}\\[0.6\baselineskip]{\theauthor\vspace{\fill}\\[0\baselineskip]
-  A Thesis Submitted to the Graduate Faculty\\[0\baselineskip]
-  of The University of Iowa in Partial Fulfillment\\[0\baselineskip]
-  of the Requirements for the Degree of\\[0\baselineskip]
-  \thedegree\\[0\baselineskip]
-  in \theconcentration}\\[2.5\baselineskip]
+  A thesis submitted in partial fulfillment\\[0\baselineskip]
+  of the requirements for the \thedegree{} degree\\[0\baselineskip]
+  in \theconcentration\\[0\baselineskip]
+  in the Graduate College\\[0\baselineskip]
+  of The University of Iowa}\\[2.5\baselineskip]
   \thedate\\[2.5\baselineskip]
   \par
 
@@ -152,11 +151,19 @@
 \renewcommand{\tableofcontents}{\old@tableofcontents*}
 
 % List of Figures should be on a new page
+\let\old@listoftables\listoftables
+\renewcommand{\listoftables}{\clearpage\old@listoftables}
+
+% List of Figures should be on a new page
 \let\old@listoffigures\listoffigures
 \renewcommand{\listoffigures}{\clearpage\old@listoffigures}
 
 % For some reason the bibliography has to be single spaced
 \let\old@printbibliography\printbibliography
+
+\let\old@mainmatter\mainmatter
+\renewcommand{\mainmatter}{\old@mainmatter\OnehalfSpacing}
+
 \renewcommand{\printbibliography}{\SingleSpacing\old@printbibliography}
 
 \newenvironment{acknowledgments}
@@ -179,6 +186,3 @@
     \hfill-- #2
     \vspace*{\fill}
   }
-
-
-
