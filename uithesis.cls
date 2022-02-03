@@ -14,7 +14,7 @@
   \PassOptionsToClass{twoside}{memoir}
 }
 
-% Check if the used specified a side to open
+% Check if the user specified a side to open
 \newtoggle{openspecified}
 \DeclareOption{openany}{
   \toggletrue{openspecified}
@@ -150,7 +150,7 @@
 \let\old@tableofcontents\tableofcontents
 \renewcommand{\tableofcontents}{\old@tableofcontents*}
 
-% List of Figures should be on a new page
+% List of tables should be on a new page
 \let\old@listoftables\listoftables
 \renewcommand{\listoftables}{\clearpage\old@listoftables}
 

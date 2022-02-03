@@ -1,11 +1,17 @@
 # UIowa Thesis Class
 
 A modern LaTeX class file for typesetting a thesis at the University of Iowa.
-See [the release page](https://github.com/uiowa-mgb/uiowa-thesis/releases) to
-download a working example to base your thesis on.
+There is an [overleaf
+template](https://www.overleaf.com/latex/templates/uiowa-thesis/nspcwqkmvcnq)
+alternatively see [the release
+page](https://github.com/uiowa-mgb/uiowa-thesis/releases) to download a working
+example to base your thesis on.
 
-**We have not yet confirmed with any one official that this does meet the
-requirements. To the best of our knowledge it does, but proceed with caution**
+The example thesis was looked over by the graduate college and appears to meet
+all the requirements. If when submitting your thesis there is something wrong
+feel free to [open an
+issue](https://github.com/uiowa-mgb/uiowa-thesis/issues/new) (or even better
+submit a pull request) so we can fix the class for future students.
 
 ## About
 
