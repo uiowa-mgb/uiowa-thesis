@@ -21,3 +21,12 @@ At the end of the day it's your thesis however; add the lines:
 ```
 in the preamble (before `\begin{document}`) your thesis will have 1in margins.
 Change 1in to your preferred margins.
+
+## How do I change the settings for biblatex?
+
+These need to be changed before calling `\documentclass`. This is done like
+this:
+```latex
+\PassOptionsToPackage{maxbibnames=999,url=true}{biblatex}
+\documentclass{uithesis}
+```
