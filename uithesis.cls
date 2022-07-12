@@ -164,6 +164,9 @@
 \let\old@mainmatter\mainmatter
 \renewcommand{\mainmatter}{\old@mainmatter\OnehalfSpacing}
 
+% The preface should also be one and a half spacing
+\newcommand{\preface}{\chapter*{Preface}\OnehalfSpacing}
+
 \renewcommand{\printbibliography}{\SingleSpacing\old@printbibliography}
 
 \newenvironment{acknowledgments}
