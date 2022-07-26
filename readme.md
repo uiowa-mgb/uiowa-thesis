@@ -17,7 +17,7 @@ submit a pull request) so we can fix the class for future students.
 ## About
 
 The goal of this package is to implement the bare minimum needed to typeset a
-thesis at the university of Iowa. In theory you should be able to just
+thesis at the university of Iowa. In theory, you should be able to just
 `\documentclass{uithesis}` and carry on as if you were writing any other TeX
 document. We follow the requirements outlined
 [here](https://grad.uiowa.edu/academics/thesis-and-dissertation/preparing-formatting)
@@ -27,7 +27,7 @@ To this end we build on the [`memoir`](https://www.ctan.org/pkg/memoir) document
 class: it is highly customizable, has a track record of being used to implement
 theses, and emulates many of the popular packages we would otherwise need to
 pull in to make this all work. On top of that we did need to import two other
-packages: [`etoolbox`](https://www.ctan.org/pkg/etoolbox), to do list processing
+packages: [`etoolbox`](https://www.ctan.org/pkg/etoolbox), to process lists
 for the committee, and [`biblatex`](https://www.ctan.org/pkg/biblatex) as we
 need to hijack the definition of the bibliography to fix the spacing of the
 bibliography. (Because for *some* reason the bibliography is the only thing to
@@ -36,12 +36,15 @@ be typeset single spaced) Other than that we do not pull in any packages.
 If you wish to help out or just play with the codebase please see
 [the development notes](#development-notes) for what's what.
 
+## Other templates
+There is at least one other thesis template maintained by the CS department
+[here](https://github.com/qianjzhang/Uiowa-Thesis-Template).
+
 ## Implemented
 
-We have not implemented all of the optional pages. If you implement one for
-your thesis that we don't have feel free to open an issue or send a pull
-request, we would love to add it. For now here's a list of everything we have
-implemented:
+We have not implemented all the optional pages. If you implement one for your
+thesis that feel free to open an issue or send a pull request, we would love to
+add it. For now here's a list of everything we have implemented:
 
 - Page Numbering (Required)
   - [x] Preliminary page numbers begin with a lower-case Roman numeral ii on
@@ -112,7 +115,7 @@ implemented:
 
 ## Development Notes
 
-The repo is structured so as to be relatively easy to build on a standard Linux
+The repo is structured to be relatively easy to build on a standard Linux
 installation. Running `make help` shows what the build targets do. To run
 everything the following is required:
 - scons
