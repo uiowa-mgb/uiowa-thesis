@@ -1,7 +1,7 @@
 EXAMPLE=example
-STYLE=uithesis.cls
+CLASS=uiowa-thesis.sty
 
-ALL=$(STYLE) $(EXAMPLE)
+ALL=$(CLASS) $(EXAMPLE)
 
 .PHONY: all clean example help release watch
 

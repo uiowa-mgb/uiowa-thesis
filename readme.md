@@ -18,7 +18,7 @@ submit a pull request) so we can fix the class for future students.
 
 The goal of this package is to implement the bare minimum needed to typeset a
 thesis at the university of Iowa. In theory, you should be able to just
-`\documentclass{uithesis}` and carry on as if you were writing any other TeX
+`\documentclass{uiowa-thesis}` and carry on as if you were writing any other TeX
 document. We follow the requirements outlined
 [here](https://grad.uiowa.edu/academics/thesis-and-dissertation/preparing-formatting)
 ([archived link](https://web.archive.org/web/20210518195321/https://grad.uiowa.edu/academics/thesis-and-dissertation/preparing-formatting)).
