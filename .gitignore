@@ -1,9 +1,9 @@
 ## Our release files go here
-release/*
+dist/*
+build/*
 
 ## SCons auxiliary files:
 .sconsign.dblite
-
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

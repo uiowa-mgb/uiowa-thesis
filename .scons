@@ -1,0 +1,20 @@
+import os
+
+pkg = "uiowa-thesis"
+class_src = pkg + ".cls"
+manual_src = pkg + ".tex"
+
+env = Environment()
+env["PDFLATEX"] = "xelatex"
+
+# Prepare the documentation
+manual = env.PDF(target="uiowa-thesis.pdf", source="uiowa-thesis.tex")
+env.Alias("manual", manual)
+
+# Prepare the example document
+example = env.PDF(target="thesis.pdf", source=os.path.join("example", "thesis.tex"))
+env.Depends(example, class_src)
+env.Precious(example)
+env.Alias("example", example)
+
+# vim: set filetype=python:

@@ -5,25 +5,20 @@ ALL=$(CLASS) $(EXAMPLE)
 
 .PHONY: all clean example help release watch
 
-all: example
-
-clean: ## Remove any build artifacts
-	@scons --clean
-	@rm -rf release
-
-example: ## Build the example document
+all:
 	@scons
 
-release: example ## Create a release folder with all release artifacts
-	@mkdir -p release; \
-		cp -t release thesis.pdf; \
-		tmp_dir="$$(mktemp -d)"; \
-		trap 'rm -rf -- "$$tmp_dir"' EXIT; \
-		cp -r example "$$tmp_dir/thesis"; \
-		cp -r -t "$$tmp_dir/thesis/" uithesis.cls; \
-		output="$$(pwd)/release/thesis.zip"; \
-		cd "$$tmp_dir"; \
-		zip -r "$$output" thesis; \
+clean: ## Remove any build artifacts
+	@rm -rf dist build
+
+example: ## Build the example document
+	@scons example
+
+release: ## Create a release folder with all release artifacts for github
+	@scons release
+
+ctan: ## Create a release archive for ctan
+	@scons ctan
 
 watch: ## Watch the example document for changes, rebuild on change (requires inotifywait)
 	@make all && while true; do \
