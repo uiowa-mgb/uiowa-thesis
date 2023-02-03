@@ -30,3 +30,16 @@ this:
 \PassOptionsToPackage{maxbibnames=999,url=true}{biblatex}
 \documentclass{uithesis}
 ```
+
+## Sublime text is not rendering the bibliography
+
+This does not work out of the box for some reason on windows. It appears that
+sublime's LaTeXTools plugin does not support biber out of the box when using
+miktex. The following steps help rectify the problem.
+1. Ensure biber and latexmk are installed with the [miktex console](https://miktex.org/howto/miktex-console)
+2. Install [strawberry perl](https://strawberryperl.com/) (May I suggest using something like [scoop](https://scoop.sh/))
+3. In sublime text go to `Preferences > Package Settings > LaTeXTools >
+   Settings -- User` there should be a line which says `"builder": "something
+   or other"` change that line to say `"builder": "basic"` then change
+   `"distro": "whatever"` to say `"distro": "texlive"`
+If this doesn't work feel free to open an issue.
