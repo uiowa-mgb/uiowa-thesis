@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uithesis}[2021/04/30]
+\ProvidesClass{uiowa-thesis}[2021/04/30]
 
 \RequirePackage{etoolbox}
 
