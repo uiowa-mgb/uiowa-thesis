@@ -188,4 +188,5 @@
 
     \hfill-- #2
     \vspace*{\fill}
+    \clearpage
   }
