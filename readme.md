@@ -5,7 +5,7 @@ There is an [overleaf
 template](https://www.overleaf.com/latex/templates/uiowa-thesis/nspcwqkmvcnq)
 alternatively see [the release
 page](https://github.com/uiowa-mgb/uiowa-thesis/releases) to download a working
-example to base your thesis on. If you have any questions the [faq](faq.md) may
+example to base your thesis on. If you have any questions the [faq](notes/faq.md) may
 contain the answer you are looking for.
 
 The example thesis was looked over by the graduate college and appears to meet
@@ -115,9 +115,5 @@ add it. For now here's a list of everything we have implemented:
 
 ## Development Notes
 
-The repo is structured to be relatively easy to build on a standard Linux
-installation. Running `make help` shows what the build targets do. To run
-everything the following is required:
-- scons
-- biber
-- inotifytools (only for `make watch`)
+Some notes about how to work on this repository can be found [here](notes/dev.md)
+
