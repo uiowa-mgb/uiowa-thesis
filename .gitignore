@@ -1,6 +1,7 @@
 ## Our release files go here
 dist/*
 build/*
+result
 
 ## SCons auxiliary files:
 .sconsign.dblite
