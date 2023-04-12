@@ -1,5 +1,5 @@
 EXAMPLE=example
-CLASS=uiowa-thesis.sty
+CLASS=uiowa-thesis.cls
 
 ALL=$(CLASS) $(EXAMPLE)
 
