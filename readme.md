@@ -2,7 +2,7 @@
 
 A modern LaTeX class file for typesetting a thesis at the University of Iowa.
 There is an [overleaf
-template](https://www.overleaf.com/latex/templates/uiowa-thesis/nspcwqkmvcnq)
+template](https://www.overleaf.com/docs?snip_uri=https://github.com/uiowa-mgb/uiowa-thesis/releases/latest/download/thesis.zip)
 alternatively see [the release
 page](https://github.com/uiowa-mgb/uiowa-thesis/releases) to download a working
 example to base your thesis on. If you have any questions the [faq](notes/faq.md) may
