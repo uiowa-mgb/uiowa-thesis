@@ -24,6 +24,8 @@
         mwe          # Lets us use example images
         xetex        # The actual tex engine to use
         hypdoc       # Used to build the ctan documentation
+        xpatch       # I'm not sure why this is needed all of a sudden
+        booktabs     # or this one...
         ;
     };
   in {
