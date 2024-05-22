@@ -1,5 +1,19 @@
 # Frequently asked questions
 
+## My bibliography is not rendering how I want.
+
+You can not call biblatex the normal way, you have to pass options to it before
+calling `\documentclass`[^1]. For example, if you would normally call biblatex
+like this:
+```latex
+\usepackage[maxbibnames=999,url=true]{biblatex}
+```
+you should instead call it like this:
+```latex
+\PassOptionsToPackage{maxbibnames=999,url=true}{biblatex}
+\documentclass{uithesis}
+```
+
 ## Can I change the margins?
 Sure! Just consult the requirements and keep in mind that long lines of text are
 harder to read.
@@ -22,15 +36,6 @@ At the end of the day it's your thesis however; add the lines:
 in the preamble (before `\begin{document}`) your thesis will have 1in margins.
 Change 1in to your preferred margins.
 
-## How do I change the settings for biblatex?
-
-These need to be changed before calling `\documentclass`. This is done like
-this:
-```latex
-\PassOptionsToPackage{maxbibnames=999,url=true}{biblatex}
-\documentclass{uithesis}
-```
-
 ## Sublime text is not rendering the bibliography
 
 This does not work out of the box for some reason on windows. It appears that
@@ -43,3 +48,8 @@ miktex. The following steps help rectify the problem.
    or other"` change that line to say `"builder": "basic"` then change
    `"distro": "whatever"` to say `"distro": "texlive"`
 If this doesn't work feel free to open an issue.
+
+[^1]: Due to the thesis requirements we have to import biblatex to fix the
+    spacing to be single space while the rest of the document is double spaced.
+    This causes issues if you try to import the package later as you can only
+    import each package once in latex.
