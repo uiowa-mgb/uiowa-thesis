@@ -60,6 +60,18 @@ By default the template stops numbering at sections, you can change this with
 \setsecnumdepth{subsubsection}
 % stop numbering at chapters
 \setsecnumdepth{chapter}
+```
+
+## My subsections are not showing up in the table of contents
+
+The counter `tocdepth` controls how deep you table of contents goes. You can
+set this with `\setcounter{tocdepth}` for example:
+```latex
+% Include subsections in the table of contents
+\setcounter{tocdepth}{3}
+% Include subsubsections in the table of contents
+\setcounter{tocdepth}{4}
+```
 
 [^1]: Due to the thesis requirements we have to import biblatex to fix the
     spacing to be single space while the rest of the document is double spaced.
