@@ -49,6 +49,18 @@ miktex. The following steps help rectify the problem.
    `"distro": "whatever"` to say `"distro": "texlive"`
 If this doesn't work feel free to open an issue.
 
+## My subsections aren't being numbered
+
+By default the template stops numbering at sections, you can change this with
+`\setsecnumdepth` for example:
+```latex
+% number subsections
+\setsecnumdepth{subsection}
+% number subsubsections
+\setsecnumdepth{subsubsection}
+% stop numbering at chapters
+\setsecnumdepth{chapter}
+
 [^1]: Due to the thesis requirements we have to import biblatex to fix the
     spacing to be single space while the rest of the document is double spaced.
     This causes issues if you try to import the package later as you can only
