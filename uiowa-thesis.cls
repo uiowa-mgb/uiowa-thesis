@@ -46,6 +46,8 @@
 \LoadClass{memoir}
 \pagestyle{plain}
 
+\cftlocalchange{toc}{3.5em}{2.5em}
+
 \RequirePackage{biblatex}
 
 % Defining a new chapter style 
