@@ -46,7 +46,7 @@
 \LoadClass{memoir}
 \pagestyle{plain}
 
-\cftlocalchange{toc}{3.5em}{2.5em}
+\cftlocalchange{toc}{3.5em}{4.5em}
 
 \RequirePackage{biblatex}
 
